@@ -32,7 +32,7 @@ const SignInScreen = () => {
         secureTextEntry={true}
         RightInputIcon={<EyeIcon color={'#B8B8B8'} />}
       />
-      <Text style={styles.forget}>Forgot Password?</Text>
+      <Text style={styles.forget} onPress={()=>navigation.navigate('ForgetPasswordScreen')}>Forgot Password?</Text>
       <CustomButton
         title={'Login'}
         color={'#fff'}

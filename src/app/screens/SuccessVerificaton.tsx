@@ -2,11 +2,41 @@ import {View, Image, StyleSheet} from 'react-native';
 import Texts from '../components/texts';
 import CustomButton from '../components/button/CustomButton';
 
-const SuccessVerification = () => {
+interface SuccessVerificationProps{
+  route: any;
+  propKey?: string;
+}
+
+const SuccessVerification = (props:SuccessVerificationProps) => {
+  const propKey = props.route.params.propKey;
   return (
     <View style={styles.container}>
       <Image source={require('../../../assets/images/success.png')} />
-      <Texts
+      {
+        propKey && propKey==='PasswordChanged'?(
+          <>
+          <Texts
+        title="Password Changed! "
+        content="Password changed successfully, you can login again with a new password"
+        contentStyle={{
+          textAlign: 'center',
+        }}
+        style={{
+          alignItems: 'center',
+          marginTop: 40,
+        }}
+      />
+      <CustomButton
+        title={'Login'}
+        color={'#FFF'}
+        bgColor={'#54408C'}
+        size={'large'}
+        style={{marginTop: 40}}
+      />
+          </>
+        ):(
+          <>
+          <Texts
         title="Congratulation! "
         content="your account is complete, please enjoy the best menu from us."
         contentStyle={{
@@ -24,6 +54,10 @@ const SuccessVerification = () => {
         size={'large'}
         style={{marginTop: 40}}
       />
+          </>
+        )
+      }
+      
     </View>
   );
 };
