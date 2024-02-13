@@ -19,7 +19,7 @@ const NewPasswordScreen = () => {
         style={{ marginTop: 16 }}
       />
       <Inputs
-        label={'Password'}
+        label={'New Password'}
         placeholder={'Your password'}
         secureTextEntry={true}
         style={{marginTop:24, marginBottom:16}}
@@ -27,7 +27,7 @@ const NewPasswordScreen = () => {
     }
       />
       <Inputs
-        label={'Password'}
+        label={'Confirm Password'}
         placeholder={'Your password'}
         secureTextEntry={true}
         RightInputIcon={<EyeIcon color={'#B8B8B8'} />}

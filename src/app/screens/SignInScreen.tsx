@@ -38,6 +38,7 @@ const SignInScreen = () => {
         color={'#fff'}
         bgColor={'#54408C'}
         size={'large'}
+        onPress={() => navigation.navigate('BottomTab')}
       />
       <PromptText
         title="Don’t have an account?"

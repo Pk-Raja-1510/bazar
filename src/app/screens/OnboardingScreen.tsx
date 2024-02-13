@@ -5,7 +5,7 @@ const OnBoardingScreen = () => {
   const navigation = useNavigation<NavigationProp<any>>();
 
   const goToHome: () => void = () => {
-    navigation.navigate('Home');
+    navigation.navigate('SpashScreen');
   };
   return (
     <>

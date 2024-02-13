@@ -1,6 +1,7 @@
 import {View, Image, StyleSheet} from 'react-native';
 import Texts from '../components/texts';
 import CustomButton from '../components/button/CustomButton';
+import { NavigationProp, useNavigation } from '@react-navigation/core';
 
 interface SuccessVerificationProps{
   route: any;
@@ -8,6 +9,7 @@ interface SuccessVerificationProps{
 }
 
 const SuccessVerification = (props:SuccessVerificationProps) => {
+  const navigation=useNavigation<NavigationProp<any>>();
   const propKey = props.route.params.propKey;
   return (
     <View style={styles.container}>
@@ -32,6 +34,7 @@ const SuccessVerification = (props:SuccessVerificationProps) => {
         bgColor={'#54408C'}
         size={'large'}
         style={{marginTop: 40}}
+        onPress={() => navigation.navigate('HomeScreen')}
       />
           </>
         ):(
